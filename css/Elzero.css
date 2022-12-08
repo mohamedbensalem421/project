@@ -1,0 +1,343 @@
+/* Start Global Rules */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body{
+  font-family: "Cairo", sans-serif;
+  margin: 0;
+}
+html {
+  scroll-behavior: smooth;
+}
+
+ul{
+  list-style: none;
+}
+.container {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Small */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+/* Medium */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+/* Large */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* End Global Rules */
+
+ /* start landing */
+header{
+  position: relative;
+  background-image: url(../images/karmouni/landing.jpg);
+  height: 100vh;
+  color: white;
+  background-size: cover;
+}
+nav{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 1px 10px black;
+}
+nav ul{
+  display: flex;
+}
+nav ul li a{
+  display: flex;
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+}
+nav .active{
+  background-color: orange;
+  color: black;
+}
+nav li a:hover{
+  background-color: orange;
+  color: black;
+}
+nav  a{
+  display: block;
+  color: white;
+  text-decoration: none;
+} 
+nav li a i{
+  margin-left: 5px;
+}
+.drop {
+  position: relative;
+  display: none;
+}
+.drop ul{
+  display: block;
+  position: absolute;
+  width: 100%;
+}
+.drop a{
+  background-color: white;
+  color: black;
+  transition: 0.3s;
+}
+.drop a:hover{
+  padding-left: 30px;
+  background-color: white;
+}
+nav ul li:hover .drop{
+  display: block;
+}
+.fa-bars{
+  margin-left: 50px;
+  font-size: 30px;
+}
+nav > a{
+  color: white;
+  text-decoration: none;
+  padding: 15px 20px;
+} 
+header .text{
+  position: absolute;
+  left: 50%;
+  top: 25%;
+  transform: translate(-50%,0%);
+  text-align: center;
+  width: 100%;
+}
+header .text h1{
+  font-size: 70px;
+  padding-bottom: 50px;
+  font-weight: 400;
+}
+header .text a{
+  color: white;
+  text-decoration: none;
+  background-color: black;
+  padding: 10px 20px;
+  margin-top: 10px;
+}
+.fa-bars:hover + ul{
+  display: block;
+}
+@media (max-width: 767px) {
+  nav ul {
+    display: none;
+    position: absolute;
+    top:50px;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.423);
+  }
+  nav .active{
+    background-color: transparent;
+    color: white;
+  }
+  header .text{
+    top: 50%;
+  }
+  header .text h1{
+    font-size: 40px;
+  }
+}
+
+@media (min-width: 768px) {
+  .fa-bars {
+    display: none;
+  }
+}
+  /* end landing */
+
+  /* start job */
+  .job{
+    display: flex;
+    justify-content: space-evenly;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    flex-wrap: wrap;
+  }
+  .job div{
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 0 9px 1px grey;
+    transition: 0.3s;
+  }
+  .job div:hover{
+    transform: scale(1.2);
+  }
+  .job div img{
+    width: 200px;
+    height: 250px;
+  }
+  .job div p{
+    padding-top: 20px;
+    font-size: large;
+  }
+  @media (max-width: 767px) {
+    .job div{
+      margin-bottom: 40px;
+    }
+  }
+  /* end job */
+
+  /* start enjeux  */
+.enjeux{
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(255, 237, 243);
+  padding: 50px;
+  flex-wrap: wrap;
+}
+.enjeux i{
+  font-size: 200px;
+  color: orange;
+}
+.enjeux .text{
+  width: 50%;
+  font-size: large;
+}
+.enjeux .text h2{
+  text-align: center;
+  padding-bottom: 40px;
+  font-weight: 500;
+}
+.enjeux .text :last-child{
+  color: grey;
+}
+@media (max-width: 767px) {
+  .enjeux .text{
+    text-align: center;
+  }
+  .enjeux .text h2{
+    padding-top: 40px;
+  }
+}
+  /* end enjeux  */
+
+  /* start accounting */
+  .accounting{
+    display: flex;
+    justify-content: space-around;
+    padding: 50px;
+    flex-wrap: wrap;
+  }
+  .accounting .text{
+    width: 50%;
+    font-size: large;
+  }
+  .accounting .text h2{
+    text-align: center;
+    padding-bottom: 40px;
+    font-weight: 500;
+  }
+  .accounting .text :not(:first-of-type){
+    color: grey;
+    padding-bottom: 20px;
+  }
+  .accounting i{
+    font-size: 250px;
+    color: orange;
+    align-self: center;
+  }
+  @media (max-width: 767px) {
+    .accounting .text{
+      text-align: center;
+    }
+    .accounting i{
+      padding-top: 40px;
+    }
+  }
+  /* end accounting */
+
+  /* start courses */
+  .course{
+    text-align: center;
+  }
+  .course > h2{
+    background-color: orange;
+    padding-top: 80px;
+    padding-bottom: 80px;
+    margin-bottom: 50px;
+  }
+  .course .grid{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: center;
+    padding-top: 30px;
+    padding-bottom: 50px;
+    gap: 20px;
+  }
+  .course .content{
+    background-image: linear-gradient(200deg , #bc2a8d,#cd485b,#e950ae,#fccc63);
+    width: 400px;
+    overflow: hidden;
+  }
+  .course .content img{
+    width: 100%;
+    height: 300px;
+  }
+  .course .content div{
+    text-align: start;
+    padding: 20px;
+    color: white;
+    line-height: 1.8;
+  }
+  .course .content div a{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    border: solid 1px white;
+    margin-top: 10px;
+    padding: 10px;
+  }
+  @media (max-width: 767px) {
+    .course .content{
+      width: 100%;
+    }
+    .course .grid{
+      grid-template-columns: auto;
+    }
+  }
+  /* end courses */
+
+  /* start logo  */
+  .logo{
+    padding-bottom: 50px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+  }
+  .logo img{
+    width: 100px;
+  }
+  /* end logo  */
+
+  /* start social */
+.social{
+  padding-top: 50px;
+  padding-bottom: 50px;
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.social i:hover{
+  color: orange;
+}
+  /* end social */
